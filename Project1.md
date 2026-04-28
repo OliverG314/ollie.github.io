@@ -78,10 +78,8 @@ So the log-likelihood is given by
 This can then be numerically maximised to find $\theta$. An example is below
 
 <div style="text-align: center;">
-	<img src="/assets/images/dataImage.png" alt="dataImage" width="400">
+  <img src="/assets/images/dataImage.png" alt="dataImage" width="400">
 </div>
-
-The function used to generate this data was
 
 For this data, the $\boldsymbol{X}$ values used were
 	
