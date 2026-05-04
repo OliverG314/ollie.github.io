@@ -9,6 +9,8 @@ markdown: kramdown
 
 This research was inspired by a group project in my third year, in which we estimated the survival and recovery rates of blackbirds and sandwich terns from a BTO dead recovery dataset. We had access to ring recovery data, and used multinomial models to estimate the rates. At the start of the project, I misinterpreted the data I had collected, and ended up creating my own model that, while valid, produced incorrect results. After the project, I found the correct data, and fit a more appropriate model. This page compares both models and contains the ongoing results of my research into this data.
 
+I have not yet commented on the results of the Bayesian estimation.
+
 ## Background and introduction
 
 Bird ringing is a method to track birds; a small ring is attached to their legs that can be used to uniquely identify them. If the bird dies and is found by someone and they report the death to the ringing scheme, then the ringers know that that bird has died. In a bird ringing scheme, a cohort of birds are ringed each year, and deaths in subsequent years from each cohort are recorded. This results in a dataset that looks like the table below
@@ -936,8 +938,8 @@ The priors for the variation in the random walk are given by
 
 $${::nomarkdown}
 \begin{aligned}
-\sigma_{S^{\text{(age)}} &\sim \text{N}^{+}\left(0, 1\right) \\
-\sigma_{r^{\text{(age)}} &\sim \text{N}^{+}\left(0, 1\right)
+\sigma_{S^{\text{(age)}}} &\sim \text{N}^{+}\left(0, 1\right) \\
+\sigma_{r^{\text{(age)}}} &\sim \text{N}^{+}\left(0, 1\right)
 \end{aligned}
 {:/}$$
 
@@ -954,8 +956,8 @@ The priors for survival and recovery rate parameters when $t > 1$ are given by
 
 $${::nomarkdown}
 \begin{aligned}
-\text{logit}\left(S^{\text{(age)}}_{t}\right) - \text{logit}\left(S^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0, \sigma_{S^{\text{(age)}}^{2}\right) \\
-\text{logit}\left(r^{\text{(age)}}_{t}\right) - \text{logit}\left(r^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0, \sigma_{r^{\text{(age)}}^{2}\right)
+\text{logit}\left(S^{\text{(age)}}_{t}\right) - \text{logit}\left(S^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0, \sigma_{S^{\text{(age)}}}^{2}\right) \\
+\text{logit}\left(r^{\text{(age)}}_{t}\right) - \text{logit}\left(r^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0, \sigma_{r^{\text{(age)}}}^{2}\right)
 \end{aligned}
 {:/}$$
 
@@ -963,8 +965,8 @@ These can be written as
 
 $${::nomarkdown}
 \begin{aligned}
-\text{logit}\left(S^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(S^{\text{(age)}}_{t-1}\right), \sigma_{S^{\text{(age)}}^{2}\right) \\
-\text{logit}\left(r^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(r^{\text{(age)}}_{t-1}\right), \sigma_{r^{\text{(age)}}^{2}\right)
+\text{logit}\left(S^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(S^{\text{(age)}}_{t-1}\right), \sigma_{S^{\text{(age)}}}^{2}\right) \\
+\text{logit}\left(r^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(r^{\text{(age)}}_{t-1}\right), \sigma_{r^{\text{(age)}}}^{2}\right)
 \end{aligned}
 {:/}$$
 
@@ -978,9 +980,11 @@ Fitting this model yields the following estimates for $f$, $r$, and $S$
   </div>
 </div>
 
+<!--
 The estimates imply that, under the assumption that first differences follow a $N\left(0, \sigma_{S}^{2}\right)$ distribution, the adult recovery rate (and harvest rate) declined over the period of the scheme. We also see that the adult survival rate increased over the first 10 years from approximately 70% to 75%, after which it declined to 67%, then returned to 70%. This could suggest that the survival rate of blackbirds oscillate, potentially due to multi-year climate patterns. This does, however, rely on the assumption that the priors are realistic. 
 
 For juveniles, we find
+-->
 
 <div style="text-align: center;">
   <div class = "row">
@@ -990,11 +994,13 @@ For juveniles, we find
   </div>
 </div>
 
+<!--
 Unlike adults, we do not see a steady decline in recovery rates; they begin to decline from 5.5% in the first year to 4% in the 5th year, but then increase back up to 5.5% in the 10th year. After this, there is a decline to around 4%. This model suggests the survival rate of juveniles steadily increase from 55% to 70%. This is also unlike the adults. 
 
 A possible explanation for this is that the natural predation on blackbirds decreased. For example, if species $A$ predated on blackbirds, and typically targeted the young as they were weak, but experienced an event causing their population to decline, then the juvenile survival rate might increase.
 
 Finally, the rates for birds recovered during the post-fledging period are
+-->
 
 <div style="text-align: center;">
   <div class = "row">
@@ -1010,8 +1016,8 @@ The priors for the variation in the random walk are given by
 
 $${::nomarkdown}
 \begin{aligned}
-\sigma_{S} &\sim \text{N}^{+}\left(0, 1\right) \\
-\sigma_{r} &\sim \text{N}^{+}\left(0, 1\right)
+\sigma_{S^{\text{(age)}}} &\sim \text{N}^{+}\left(0, 1\right) \\
+\sigma_{r^{\text{(age)}}} &\sim \text{N}^{+}\left(0, 1\right)
 \end{aligned}
 {:/}$$
 
@@ -1030,16 +1036,16 @@ The priors for survival and recovery rate parameters when $t > 2$ are given by
 
 $${::nomarkdown}
 \begin{aligned}
-\left(\text{logit}\left(S^{\text{(age)}}_{t}\right) - \text{logit}\left(S^{\text{(age)}}_{t-1}\right)\right) - \left(\text{logit}\left(S^{\text{(age)}}_{t-1}\right) - \text{logit}\left(S^{\text{(age)}}_{t-2}\right)\right) &\sim \text{N}\left(0,\sigma_{S}^{2}\right) \\
-\left(\text{logit}\left(r^{\text{(age)}}_{t}\right) - \text{logit}\left(r^{\text{(age)}}_{t-1}\right)\right) - \left(\text{logit}\left(r^{\text{(age)}}_{t-1}\right) - \text{logit}\left(r^{\text{(age)}}_{t-2}\right)\right) &\sim \text{N}\left(0,\sigma_{r}^{2}\right) \end{aligned}
+\left(\text{logit}\left(S^{\text{(age)}}_{t}\right) - \text{logit}\left(S^{\text{(age)}}_{t-1}\right)\right) - \left(\text{logit}\left(S^{\text{(age)}}_{t-1}\right) - \text{logit}\left(S^{\text{(age)}}_{t-2}\right)\right) &\sim \text{N}\left(0,\sigma_{S^{\text{(age)}}}^{2}\right) \\
+\left(\text{logit}\left(r^{\text{(age)}}_{t}\right) - \text{logit}\left(r^{\text{(age)}}_{t-1}\right)\right) - \left(\text{logit}\left(r^{\text{(age)}}_{t-1}\right) - \text{logit}\left(r^{\text{(age)}}_{t-2}\right)\right) &\sim \text{N}\left(0,\sigma_{r^{\text{(age)}}}^{2}\right) \end{aligned}
 {:/}$$
 
 These can be written as
 
 $${::nomarkdown}
 \begin{aligned}
-\text{logit}\left(S^{\text{(age)}}_{t}\right) &\sim \text{N}\left(2\cdot\text{logit}\left(S^{\text{(age)}}_{t-1}\right) - \text{logit}\left(S^{\text{(age)}}_{t-2}\right), \sigma_{S}^{2}\right) \\
-\text{logit}\left(r^{\text{(age)}}_{t}\right) &\sim \text{N}\left(2\cdot\text{logit}\left(r^{\text{(age)}}_{t-1}\right) - \text{logit}\left(r^{\text{(age)}}_{t-2}\right), \sigma_{r}^{2}\right)
+\text{logit}\left(S^{\text{(age)}}_{t}\right) &\sim \text{N}\left(2\cdot\text{logit}\left(S^{\text{(age)}}_{t-1}\right) - \text{logit}\left(S^{\text{(age)}}_{t-2}\right), \sigma_{S^{\text{(age)}}}^{2}\right) \\
+\text{logit}\left(r^{\text{(age)}}_{t}\right) &\sim \text{N}\left(2\cdot\text{logit}\left(r^{\text{(age)}}_{t-1}\right) - \text{logit}\left(r^{\text{(age)}}_{t-2}\right), \sigma_{r^{\text{(age)}}}^{2}\right)
 \end{aligned}
 {:/}$$
 
