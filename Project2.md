@@ -7,7 +7,7 @@ markdown: kramdown
 
 # Various approaches to estimating survival and recovery rates from dead recovery data
 
-This research was inspired by a group project in my third year, in which we estimated the survival and recovery rates of blackbirds and sandwich terns from a BTO dead recovery dataset. We had access to ring recovery data, and used multinomial models to estimate the rates. During this project, I created my own model for estimating more parameters, which I developed further after completing the project. This page contains the ongoing results of this research.
+This research was inspired by a group project in my third year, in which we estimated the survival and recovery rates of blackbirds and sandwich terns from a BTO dead recovery dataset. We had access to ring recovery data, and used multinomial models to estimate the rates. At the start of the project, I misinterpreted the data I had collected, and ended up creating my own model that, while valid, produced incorrect results. After the project, I found the correct data, and fit a more appropriate model. This page compares both models and contains the ongoing results of my research into this data.
 
 ## Background and introduction
 
@@ -936,12 +936,12 @@ The priors for the variation in the random walk are given by
 
 $${::nomarkdown}
 \begin{aligned}
-\sigma_{S} &\sim \text{N}^{+}\left(0, 1\right) \\
-\sigma_{r} &\sim \text{N}^{+}\left(0, 1\right)
+\sigma_{S^{\text{(age)}} &\sim \text{N}^{+}\left(0, 1\right) \\
+\sigma_{r^{\text{(age)}} &\sim \text{N}^{+}\left(0, 1\right)
 \end{aligned}
 {:/}$$
 
-The priors for the first parameter is given by
+The priors for the first parameter are given by
 		
 $${::nomarkdown}
 \begin{aligned}
@@ -954,8 +954,8 @@ The priors for survival and recovery rate parameters when $t > 1$ are given by
 
 $${::nomarkdown}
 \begin{aligned}
-\text{logit}\left(S^{\text{(age)}}_{t}\right) - \text{logit}\left(S^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0,\sigma_{S}^{2}\right) \\
-\text{logit}\left(r^{\text{(age)}}_{t}\right) - \text{logit}\left(r^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0,\sigma_{r}^{2}\right)
+\text{logit}\left(S^{\text{(age)}}_{t}\right) - \text{logit}\left(S^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0, \sigma_{S^{\text{(age)}}^{2}\right) \\
+\text{logit}\left(r^{\text{(age)}}_{t}\right) - \text{logit}\left(r^{\text{(age)}}_{t-1}\right) &\sim \text{N}\left(0, \sigma_{r^{\text{(age)}}^{2}\right)
 \end{aligned}
 {:/}$$
 
@@ -963,8 +963,8 @@ These can be written as
 
 $${::nomarkdown}
 \begin{aligned}
-\text{logit}\left(S^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(S^{\text{(age)}}_{t-1}\right), \sigma_{S}^{2}\right) \\
-\text{logit}\left(r^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(r^{\text{(age)}}_{t-1}\right), \sigma_{r}^{2}\right)
+\text{logit}\left(S^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(S^{\text{(age)}}_{t-1}\right), \sigma_{S^{\text{(age)}}^{2}\right) \\
+\text{logit}\left(r^{\text{(age)}}_{t}\right) &\sim \text{N}\left(\text{logit}\left(r^{\text{(age)}}_{t-1}\right), \sigma_{r^{\text{(age)}}^{2}\right)
 \end{aligned}
 {:/}$$
 
