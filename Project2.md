@@ -1049,6 +1049,30 @@ $${::nomarkdown}
 \end{aligned}
 {:/}$$
 
+<div style="text-align: center;">
+  <div class = "row">
+      <img src="/assets/images/f0_RW2.png" width="400">
+      <img src="/assets/images/r0_RW2.png" width="400">
+      <img src="/assets/images/S0_RW2.png" width="400">
+  </div>
+</div>
+
+<div style="text-align: center;">
+  <div class = "row">
+      <img src="/assets/images/f1_RW2.png" width="400">
+      <img src="/assets/images/r1_RW2.png" width="400">
+      <img src="/assets/images/S1_RW2.png" width="400">
+  </div>
+</div>
+
+<div style="text-align: center;">
+  <div class = "row">
+      <img src="/assets/images/f2_RW2.png" width="400">
+      <img src="/assets/images/r2_RW2.png" width="400">
+      <img src="/assets/images/S2_RW2.png" width="400">
+  </div>
+</div>
+
 ### Data frames
 
 Data frames containing the estimates, standard errors, and confidence interval bounds are below
