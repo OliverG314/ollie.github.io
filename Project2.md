@@ -1014,11 +1014,11 @@ The estimates of $\sigma$ are
 
 <table style="margin: 0 auto; border-collapse: collapse; width: auto;">
 <tr><th>param</th><th>age</th><th>Mean</th><th>Median</th><th>StdErr</th><th>Lower</th><th>Upper</th></tr>
-<tr><td>r</td><td>a</td><td>1.04E-01</td><td>9.88E-02</td><td>0.0322859</td><td>0.05569357</td><td>0.180291</td></tr>
-<tr><td>r</td><td>j</td><td>1.30E-01</td><td>1.26E-01</td><td>0.04364288</td><td>0.054742763</td><td>0.2268793</td></tr>
-<tr><td>r</td><td>p</td><td>4.81E-02</td><td>4.16E-02</td><td>0.0328937</td><td>0.00331044</td><td>0.129522</td></tr>
-<tr><td>s</td><td>a</td><td>1.02E-01</td><td>9.70E-02</td><td>0.04225906</td><td>0.034732977</td><td>0.1987097</td></tr>
-<tr><td>s</td><td>j</td><td>0.11131672</td><td>1.06E-01</td><td>0.04838992</td><td>0.030027302</td><td>0.2218385</td></tr>
+<tr><td>r</td><td>a</td><td>0.10370696</td><td>0.09876766</td><td>0.0322859</td><td>0.05569357</td><td>0.180291</td></tr>
+<tr><td>r</td><td>j</td><td>0.13022762</td><td>0.12635774</td><td>0.04364288</td><td>0.054742763</td><td>0.2268793</td></tr>
+<tr><td>r</td><td>p</td><td>0.04811699</td><td>0.04159333</td><td>0.0328937</td><td>0.00331044</td><td>0.129522</td></tr>
+<tr><td>s</td><td>a</td><td>0.10216709</td><td>0.09695040</td><td>0.04225906</td><td>0.034732977</td><td>0.1987097</td></tr>
+<tr><td>s</td><td>j</td><td>0.11131672</td><td>0.10592293</td><td>0.04838992</td><td>0.030027302</td><td>0.2218385</td></tr>
 <tr><td>s</td><td>p</td><td>0.05775504</td><td>0.04610405</td><td>0.04757393</td><td>0.002333356</td><td>0.1774066</td></tr>
 </table>
 
@@ -1089,10 +1089,10 @@ The estimates of $\sigma$ are
 
 <table style="margin: 0 auto; border-collapse: collapse; width: auto;">
 <tr><th>param</th><th>age</th><th>Mean</th><th>Median</th><th>StdErr</th><th>Lower</th><th>Upper</th></tr>
-<tr><td>r</td><td>a</td><td>3.38E-02</td><td>0.02440113</td><td>0.03196621</td><td>0.000870397</td><td>0.11784049</td></tr>
-<tr><td>r</td><td>j</td><td>1.02E-01</td><td>0.09468576</td><td>0.04275921</td><td>0.038812181</td><td>0.20398297</td></tr>
-<tr><td>r</td><td>p</td><td>2.19E-02</td><td>0.01529642</td><td>0.02249487</td><td>0.000823826</td><td>0.08327095</td></tr>
-<tr><td>s</td><td>a</td><td>5.09E-02</td><td>0.03946132</td><td>0.03989246</td><td>0.00617383</td><td>0.15452881</td></tr>
+<tr><td>r</td><td>a</td><td>0.03376615</td><td>0.02440113</td><td>0.03196621</td><td>0.000870397</td><td>0.11784049</td></tr>
+<tr><td>r</td><td>j</td><td>0.10170912</td><td>0.09468576</td><td>0.04275921</td><td>0.038812181</td><td>0.20398297</td></tr>
+<tr><td>r</td><td>p</td><td>0.02189553</td><td>0.01529642</td><td>0.02249487</td><td>0.000823826</td><td>0.08327095</td></tr>
+<tr><td>s</td><td>a</td><td>0.05089639</td><td>0.03946132</td><td>0.03989246</td><td>0.00617383</td><td>0.15452881</td></tr>
 <tr><td>s</td><td>j</td><td>0.0490313</td><td>0.03748885</td><td>0.04235184</td><td>0.002275359</td><td>0.15988431</td></tr>
 <tr><td>s</td><td>p</td><td>0.03804243</td><td>0.02767054</td><td>0.03591204</td><td>0.002300109</td><td>0.13582211</td></tr>
 </table>
