@@ -692,6 +692,8 @@ $${::nomarkdown}
 \end{aligned}
 {:/}$$
 
+As previously stated, there is no benefit to using this model, as the date of recovery is always recorded, meaning we are never in the scenario where we only have access to combined post-fledging and juvenile recoveries. It is presented to demonstrate my ability to research current models and develop them.
+
 ## An example
 
 ### The data
