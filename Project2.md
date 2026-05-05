@@ -1584,6 +1584,7 @@ Data frames containing the Bayesian estimates, standard errors, 95% credible int
 <tr><td>20</td><td>r</td><td>2</td><td>0.02832633</td><td>0.0280899</td><td>0.003300581</td><td>0.0222527</td><td>0.0350762</td><td>156</td><td>1.042221</td></tr>
 <tr><td>20</td><td>r</td><td>1</td><td>0.05432114</td><td>0.05045645</td><td>0.022638813</td><td>0.02295</td><td>0.0859422</td><td>84</td><td>1.057055</td></tr>
 <tr><td>20</td><td>r</td><td>0</td><td>0.02756044</td><td>0.026335</td><td>0.005756562</td><td>0.021446</td><td>0.0362336</td><td>193</td><td>1.164148</td></tr>
+</table>
 </details>
 
 ### R code
