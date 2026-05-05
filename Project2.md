@@ -1012,7 +1012,7 @@ Finally, the rates for birds recovered during the post-fledging period are
 
 The estimates of $\sigma$ are
 
-<table>
+<table style="margin: 0 auto; border-collapse: collapse; width: auto;">
 <tr><th>param</th><th>age</th><th>Mean</th><th>Median</th><th>StdErr</th><th>Lower</th><th>Upper</th></tr>
 <tr><td>r</td><td>a</td><td>1.04E-01</td><td>9.88E-02</td><td>0.0322859</td><td>0.05569357</td><td>0.180291</td></tr>
 <tr><td>r</td><td>j</td><td>1.30E-01</td><td>1.26E-01</td><td>0.04364288</td><td>0.054742763</td><td>0.2268793</td></tr>
@@ -1087,7 +1087,7 @@ $${::nomarkdown}
 
 The estimates of $\sigma$ are
 
-<table>
+<table style="margin: 0 auto; border-collapse: collapse; width: auto;">
 <tr><th>param</th><th>age</th><th>Mean</th><th>Median</th><th>StdErr</th><th>Lower</th><th>Upper</th></tr>
 <tr><td>r</td><td>a</td><td>3.38E-02</td><td>0.02440113</td><td>0.03196621</td><td>0.000870397</td><td>0.11784049</td></tr>
 <tr><td>r</td><td>j</td><td>1.02E-01</td><td>0.09468576</td><td>0.04275921</td><td>0.038812181</td><td>0.20398297</td></tr>
