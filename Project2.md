@@ -439,7 +439,7 @@ Under this model, the expected number of recoveries in each cell is given by
 
 ### The likelihood
 
-This model gives the row-wise likelihood functions
+This model gives the row-wise log-likelihood functions
 
 $${::nomarkdown}
 \begin{aligned}
@@ -459,7 +459,7 @@ $${::nomarkdown}
 \end{aligned}
 {:/}$$
 
-are the total probabilities of recovery for cohort $p$. From this, we define
+are the total probabilities of recovery for cohort $p$. From this, we define the total log-likelihoods for each age group
 
 $${::nomarkdown}
 \begin{aligned}
@@ -469,7 +469,7 @@ $${::nomarkdown}
 \end{aligned}
 {:/}$$
 
-so that the total likelihood is given by
+so that the total log-likelihood is given by
 
 $${::nomarkdown}
 \mathscr{L} = \ln\left(\mathcal{L}\right) + \ln\left(\mathcal{L'}\right) + \ln\left(\mathcal{L''}\right)
@@ -651,7 +651,7 @@ $${::nomarkdown}
 \end{aligned}
 {:/}$$
 
-where $\theta_{i}$, $\theta'_{i}$, and $\theta''_{i}$ are the same as above. The total likelihood is given by summing these likelihoods over all rows, then adding them.
+where $\theta_{i}$, $\theta_{i}'$, and $\theta_{i}''$ are the same as above. The total likelihood is given by summing these likelihoods over all rows, then adding them.
 
 ### MLEs
 
